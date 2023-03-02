@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Начало страницы</h1>
+{% load menu_tags %}
+<div class="treeHTML">
+    {# Отрисовка меню на странице по названию из БД #}
+    {% draw_menu 'Категория 1' %}
+</div>
+
+<div class="treeHTML">
+    {# Отрисовка меню на странице по названию из БД #}
+    {% draw_menu 'Категория 2' %}
+</div>
+
+</body>
+</html>

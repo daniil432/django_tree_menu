@@ -1,0 +1,11 @@
+<details {{ node.status }}><summary><a href="{% url 'menu' node.slug %}">{{node.title}}</a></summary>
+    {% if node.children|length %}
+        <ul>
+         {%for ch in node.children %}
+              {% with node=ch template_name="tree_menu/tree_view_template.html" %}
+                   {% include template_name %}
+              {% endwith %}
+         {% endfor %}
+         </ul>
+    {%endif%}
+</details>
