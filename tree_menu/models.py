@@ -20,7 +20,6 @@ class TreeModel(models.Model):
 class MenuCategory(models.Model):
     title = models.CharField(max_length=255)
     time_create = models.DateTimeField(auto_now_add=True, verbose_name='Время создания')
-    is_published = models.BooleanField(default=True)
 
     def __str__(self):
         return self.title
@@ -28,4 +27,4 @@ class MenuCategory(models.Model):
     class Meta:
         verbose_name = "Категория меню"
         verbose_name_plural = "Категории меню"
-        ordering = ["id", "is_published"]
+        ordering = ["id",]

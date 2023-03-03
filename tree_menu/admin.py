@@ -24,8 +24,8 @@ class TreeModelAdmin(admin.ModelAdmin):
 
 
 class MenuCategoryAdmin(admin.ModelAdmin):
-    list_display = ("id", "title", "is_published")
-    search_fields = ("title", "is_published",)
+    list_display = ("id", "title",)
+    search_fields = ("title",)
 
 
 admin.site.register(MenuCategory, MenuCategoryAdmin)
