@@ -4,5 +4,5 @@ from tree_menu import views
 
 urlpatterns = [
     path("", views.index),
-    path("<slug:cat_slug>/", views.index, name='menu')
+    path("<path:cat_slug>/", views.index, name='menu'),
 ]

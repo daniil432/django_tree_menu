@@ -31,6 +31,8 @@ def draw_menu(context, menu_cat):
                 parent_id = obj['parent']
                 tree[parent_id] += tree[obj['id']]
                 tree[obj['id']].parent = tree[parent_id]
+                tree[obj['id']].slug = f"{tree[parent_id].slug}/{tree[obj['id']].slug}"
+
         return menu_list
 
     # Получение queryset'а из БД по названию меню.
